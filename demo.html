@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<link href="demo.css" media="screen" rel="stylesheet" type="text/css">
+		<link href="u-shifter.css" media="screen" rel="stylesheet" type="text/css">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<!--
+		<div id="u-shifter" class="u-wrapper u-panel" style="padding: 20px;">
+			<ul class="u-shifter u-shifteropen u-wrapper">
+				<li id="firstView">
+					<span>
+						asd
+					</span>
+					<ul class="dl-submenu">
+						<li id="secondView">
+							<span>
+								asd1
+							</span>
+							<ul class="dl-submenu">
+								<li id="thirdView">
+									<span>
+										asd2
+									</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		-->
+		<div class="col-lg-offset-3 col-lg-6">
+		<div id="ushifter" class="u-wrapper u-shifter">
+			<div id="firstView" class="u-view open">
+				<div class="panel panel-default">
+					<div class="panel-heading">View 1</div>
+					<div class="panel-body">
+						view 1
+					</div>
+				</div>
+			</div>
+			<div id="secondView" class="u-view">
+				<div class="panel panel-default">
+					<div class="panel-heading">View 2</div>
+					<div class="panel-body">
+						view 2
+					</div>
+				</div>
+			</div>
+			<div id="thirdView" class="u-view">
+				<div class="panel panel-default">
+					<div class="panel-heading">View 3</div>
+					<div class="panel-body">
+						view 3
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		
+		<script type="application/javascript"  src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script type="application/javascript"  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		<script type="text/javascript" src="u-shifter.js"></script>
+		<script>
+			var shifter = $( '#ushifter' ).ushifter().data('ushifter');
+		</script>
+	</body>
+</html>

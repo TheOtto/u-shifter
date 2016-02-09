@@ -1,0 +1,169 @@
+
+/* Common styles of menus */
+
+.u-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.u-wrapper .u-shifter {
+    margin: 5px 0 0 0;
+    /*position: absolute;*/
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.u-view {
+	display: none;
+}
+
+.u-view.open {
+	display: block;
+}
+
+/* Animation classes for moving out and in */
+
+.leftToIn {
+    -webkit-animation: leftToIn 0.3s ease-in-out;
+    animation: leftToIn 0.3s ease-in-out;
+}
+
+/* Left to In */
+@-webkit-keyframes leftToIn {
+    0% {
+        -webkit-transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/* Left to In */
+@keyframes leftToIn {
+    0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.rightToIn {
+    -webkit-animation: rightToIn 0.3s ease-in-out;
+    animation: rightToIn 0.3s ease-in-out;
+}
+
+/* Right to In */
+@-webkit-keyframes rightToIn {
+    0% {
+        -webkit-transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        opacity: 1;
+    }
+}
+/* Right to In */
+@keyframes rightToIn {
+    0% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/*** OUT ***/
+.LeftToOut {
+    -webkit-animation: LeftToOut 0.3s ease-in-out;
+    animation: LeftToOut 0.3s ease-in-out;
+}
+
+.RightToOut {
+    -webkit-animation: RightToOut 0.3s ease-in-out;
+    animation: RightToOut 0.3s ease-in-out;
+}
+
+/* Left Out */
+@-webkit-keyframes LeftToOut {
+    0% { }
+    100% {
+        -webkit-transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+/* Left Out */
+@keyframes LeftToOut {
+    0% { }
+    100% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+/* Right Out */
+@-webkit-keyframes RightToOut {
+    0% {
+        -webkit-transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateX(100%);
+        opacity: 0;
+    }
+}
+/* Right Out */
+@keyframes RightToOut {
+    0% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+
+/* No JS Fallback */
+.no-js .u-wrapper .u-shifter {
+    position: relative;
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}
+
+.no-js .u-wrapper li .dl-submenu {
+    display: block;
+}
+
+.no-js .u-wrapper li.u-back {
+    display: none;
+}
+
+.no-js .u-wrapper li > a:not(:only-child) {
+    background: rgba(0,0,0,0.1);
+}
+
+.no-js .u-wrapper li > a:not(:only-child):after {
+    content: '';
+}
+
